@@ -19,3 +19,14 @@ Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
 // -------- Variables --------
 int totalStudents = 0;
+int presentCount = 0;
+int entered = 0;
+
+String roll = "";
+String studentInput = "";
+
+bool started = false;
+bool numberEntered = false;
+
+void setup() {
+  lcd.init();
