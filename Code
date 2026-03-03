@@ -107,6 +107,7 @@ void loop() {
         lcd.print("Absent");
         delay(1200);
         nextStudent();
+      
       }
       else if (key == 'D') {  // Show Result
         lcd.clear();
