@@ -30,3 +30,16 @@ bool numberEntered = false;
 
 void setup() {
   lcd.init();
+  lcd.backlight();
+  lcd.clear();
+  lcd.print("Press * to Start");
+}
+
+void loop() {
+
+  char key = keypad.getKey();
+
+  if (key) {
+
+    // ---------- STEP 0: WAIT FOR START ----------
+    if (!started) {
