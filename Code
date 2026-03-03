@@ -52,4 +52,13 @@ if (key == '*') {
     }
     // ---------- STEP 1: ENTER TOTAL STUDENTS ----------
     else if (!numberEntered) {
+if (key >= '0' && key <= '9') {
+        studentInput += key;
+        lcd.print(key);
+      }
 
+      else if (key == '#') {   // Confirm
+        totalStudents = studentInput.toInt();
+        numberEntered = true;
+
+        lcd.clear();
