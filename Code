@@ -134,4 +134,28 @@ void nextStudent() {
     lcd.print("Press D Result");
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
