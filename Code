@@ -1,1 +1,10 @@
 #include <wire.h>
+#include <LiquidCrystal_I2C.h>
+#include <keypad.h>
+LiquidCrystal_I2C lcd(0x20,16,2);
+//-------keypad setup--------
+const byte ROWS = 4;
+const byte COLS = 4; 
+char keys[ROWS][COLS]={
+{'1','2','3','A'},
+
