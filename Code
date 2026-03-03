@@ -62,3 +62,77 @@ if (key >= '0' && key <= '9') {
         numberEntered = true;
 
         lcd.clear();
+lcd.print("Total: ");
+        lcd.print(totalStudents);
+        delay(1500);
+
+        lcd.clear();
+        lcd.print("Enter Roll No:");
+      }
+
+      else if (key == '*') {   // Clear input
+        studentInput = "";
+lcd.setCursor(0,1);
+        lcd.print("                ");
+        lcd.setCursor(0,1);
+      }
+    }
+
+    // ---------- STEP 2: ATTENDANCE ----------
+    else {
+
+      if (key >= '0' && key <= '9') {
+        roll += key;
+lcd.setCursor(0,1);
+        lcd.print(roll);
+      }
+
+      else if (key == 'B') {  // Present
+        presentCount++;
+        entered++;
+        lcd.clear();
+        lcd.print("Roll ");
+lcd.print(roll);
+        lcd.setCursor(0,1);
+        lcd.print("Present");
+        delay(1200);
+        nextStudent();
+      }
+
+      else if (key == 'A') {  // Absent
+        entered++;
+lcd.clear();
+        lcd.print("Roll ");
+        lcd.print(roll);
+        lcd.setCursor(0,1);
+        lcd.print("Absent");
+        delay(1200);
+        nextStudent();
+      }
+else if (key == 'D') {  // Show Result
+        lcd.clear();
+        float percentage = ((float)presentCount / totalStudents) * 100;
+        lcd.print("Attendance:");
+        lcd.setCursor(0,1);
+        lcd.print(percentage);
+        lcd.print("%");
+      }
+else if (key == '*') {  // Clear roll input
+        roll = "";
+        lcd.setCursor(0,1);
+        lcd.print("                ");
+        lcd.setCursor(0,1);
+      }
+    }
+  }
+}
+void nextStudent() {
+  roll = "";
+  lcd.clear();
+  if (entered < totalStudents) {
+    lcd.print("Enter Roll No:");
+  } else {
+    lcd.print("Press D Result");
+  }
+}
+
