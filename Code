@@ -105,3 +105,11 @@ lcd.print(roll);
 
       else if (key == 'A') {  // Absent
         entered++;
+lcd.clear();
+        lcd.print("Roll ");
+        lcd.print(roll);
+        lcd.setCursor(0,1);
+        lcd.print("Absent");
+        delay(1200);
+        nextStudent();
+      }
