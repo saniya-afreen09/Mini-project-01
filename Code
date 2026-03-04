@@ -113,3 +113,11 @@ lcd.clear();
         delay(1200);
         nextStudent();
       }
+else if (key == 'D') {  // Show Result
+        lcd.clear();
+        float percentage = ((float)presentCount / totalStudents) * 100;
+        lcd.print("Attendance:");
+        lcd.setCursor(0,1);
+        lcd.print(percentage);
+        lcd.print("%");
+      }
