@@ -46,3 +46,12 @@ void loop() {
 
     // ---------- STEP 0: WAIT FOR START ----------
     if (!started) {
+if (key == '*') {
+        started = true;
+        lcd.clear();
+        lcd.print("Enter No.Students");
+        lcd.setCursor(0,1);
+      }
+    }
+    // ---------- STEP 1: ENTER TOTAL STUDENTS ----------
+    else if (!numberEntered) {
