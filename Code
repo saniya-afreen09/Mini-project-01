@@ -65,6 +65,7 @@ lcd.print("Total: ");
 
       else if (key == '*') {   // Clear input
         studentInput = "";
+
 lcd.print("Total: ");
         lcd.print(totalStudents);
         delay(1500);
