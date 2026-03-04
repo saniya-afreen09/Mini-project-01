@@ -121,3 +121,12 @@ else if (key == 'D') {  // Show Result
         lcd.print(percentage);
         lcd.print("%");
       }
+else if (key == '*') {  // Clear roll input
+        roll = "";
+        lcd.setCursor(0,1);
+        lcd.print("                ");
+        lcd.setCursor(0,1);
+      }
+    }
+  }
+}
