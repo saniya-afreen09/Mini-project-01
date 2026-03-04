@@ -86,3 +86,13 @@ lcd.setCursor(0,1);
 
       if (key >= '0' && key <= '9') {
         roll += key;
+
+lcd.setCursor(0,1);
+        lcd.print(roll);
+      }
+
+      else if (key == 'B') {  // Present
+        presentCount++;
+        entered++;
+        lcd.clear();
+        lcd.print("Roll ");
