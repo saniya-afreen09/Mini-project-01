@@ -55,17 +55,16 @@ if (key == '*') {
     }
     // ---------- STEP 1: ENTER TOTAL STUDENTS ----------
     else if (!numberEntered) {
-lcd.print("Total: ");
-        lcd.print(totalStudents);
-        delay(1500);
-
-        lcd.clear();
-        lcd.print("Enter Roll No:");
+if (key >= '0' && key <= '9') {
+        studentInput += key;
+        lcd.print(key);
       }
 
-      else if (key == '*') {   // Clear input
-        studentInput = "";
+      else if (key == '#') {   // Confirm
+        totalStudents = studentInput.toInt();
+        numberEntered = true;
 
+        lcd.clear();
 lcd.print("Total: ");
         lcd.print(totalStudents);
         delay(1500);
