@@ -130,3 +130,13 @@ else if (key == '*') {  // Clear roll input
     }
   }
 }
+
+void nextStudent() {
+  roll = "";
+  lcd.clear();
+  if (entered < totalStudents) {
+    lcd.print("Enter Roll No:");
+  } else {
+    lcd.print("Press D Result");
+  }
+}
