@@ -75,3 +75,14 @@ lcd.print("Total: ");
 
       else if (key == '*') {   // Clear input
         studentInput = "";
+lcd.setCursor(0,1);
+        lcd.print("                ");
+        lcd.setCursor(0,1);
+      }
+    }
+
+    // ---------- STEP 2: ATTENDANCE ----------
+    else {
+
+      if (key >= '0' && key <= '9') {
+        roll += key;
