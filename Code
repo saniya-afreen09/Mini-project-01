@@ -96,3 +96,12 @@ lcd.setCursor(0,1);
         entered++;
         lcd.clear();
         lcd.print("Roll ");
+lcd.print(roll);
+        lcd.setCursor(0,1);
+        lcd.print("Present");
+        delay(1200);
+        nextStudent();
+      }
+
+      else if (key == 'A') {  // Absent
+        entered++;
